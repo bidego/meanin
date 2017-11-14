@@ -7,6 +7,7 @@ module.exports = function () {
         conf.paths.dist
       ]
     },
+    port: 80,
     open: false
   };
 };

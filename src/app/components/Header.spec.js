@@ -30,7 +30,7 @@ describe('components', () => {
       const [h1, input] = output.props.children;
 
       expect(h1.type).toBe('h1');
-      expect(h1.props.children).toBe('YO');
+      expect(h1.props.children).toBe('To do List');
 
       expect(input.type).toBe(TodoTextInput);
       expect(input.props.newTodo).toBe(true);
@@ -42,7 +42,7 @@ describe('components', () => {
       const input = output.props.children[1];
       input.props.onSave('');
       expect(props.addTodo.calls.count()).toBe(0);
-      input.props.onSave('Use Redux');
+      input.props.onSave('Example item');
       expect(props.addTodo.calls.count()).toBe(1);
     });
   });
